@@ -1,4 +1,5 @@
 # Write your code here.
+POSITION = 0
 
 def line(katz_deli)
   if katz_deli.empty?
@@ -11,11 +12,12 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, name)
-  position = katz_deli.length + 1
-  katz_deli.append(name)
-  puts "Welcome, #{name}. You are number #{position} in line."
+def take_a_number(katz_deli)
+  position += 1
+  katz_deli << position
+  puts "You are number #{position} in line."
 end
+
 
 def now_serving(katz_deli)
   if katz_deli.empty? then
